@@ -1,4 +1,8 @@
 # Prerequisites
+*.m
+*.mx
+*.log
+*.str
 *.d
 
 # Compiled Object files
