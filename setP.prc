@@ -13,9 +13,7 @@
 	#else
 		Global P{'i'-'j'}d'j' = cefbef'i'd'j' + 2*i_/({'i'-'j'})*der(1,P({'i'-'j'},{'j'-1})) + 1/{('i'-'j')^2}*der(2,P({'i'-'j'},{'j'-2}));
 	#endif
-	.sort
 	#call deriv
-	.sort
 #enddo
 
 
@@ -28,7 +26,7 @@
 	#else
 		fill P({'i'-'j'},'j') = P{'i'-'j'}d'j';
 	#endif
-	.sort
+	.sort:Insert P({'i'-'j'},'j');
 #enddo
 
 
