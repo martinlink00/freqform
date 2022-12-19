@@ -9,6 +9,6 @@
 
 #endif
 
-.sort
+.sort:Equation ('i',{'i'-'j'});
 
 #endprocedure
