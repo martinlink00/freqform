@@ -1,6 +1,15 @@
-#define HC "5";
+#: MaxTermSize 1M
+#: WorkSpace 4500M
+#: SubTermsInSmall 1M
+#: SubSmallSize 100M
+#: SubLargeSize 1000M
+#: MaxNumberSize 50K
+
+#define HC "8";
 #define MAX "{2*'HC'+2}";
 
+
+On statistics;
 Auto S a,c,n;
 S ep,z,y,r;
 CF x,der,pro;
@@ -13,7 +22,6 @@ Table relax p(0:'MAX',0:'MAX');
 id p({'MAX'-2},0) = 0;
 
 .store
-
 
 #do i=-1,{'MAX'-1}
 	#do j=-1,{'i'+2}
