@@ -1,11 +1,11 @@
 #: MaxTermSize 1M
-#: WorkSpace 4500M
+#: WorkSpace 4000M
 #: SubTermsInSmall 1M
 #: SubSmallSize 100M
 #: SubLargeSize 1000M
 #: MaxNumberSize 50K
 
-#define HC "8";
+#define HC "6";
 #define MAX "{2*'HC'+2}";
 
 
@@ -19,24 +19,32 @@ Table relax p(0:'MAX',0:'MAX');
 .global
 
 #include sinex.frm;
+
 id p({'MAX'-2},0) = 0;
 
 .store
 
 #do i=-1,{'MAX'-1}
 	#do j=-1,{'i'+2}
+		#write "Calculating coeff of sin at ('i','j')"
 		#call getsinex('i','j')
 	#enddo
 #enddo
 
-#do i=1,{'MAX'}
-	#do j=0,{'i'}
-		#call getcefbef('i','j')
+#write "Saving coeff of sin"
+
+#do i=-1,{'MAX'-1}
+	#do j=-1,{'i'+2}
+		Global ssepx{'i'+2}d{'j'+1} = sepsx{'i'+2}d{'j'+1};
 	#enddo
 #enddo
+.sort
 
-#do i=1,{'MAX'}
-	#call setP('i')
+#write "Solving eqs now"
+
+#do k=1,{'MAX'}
+	#write "Treating sols at eps^'k'"
+	#call setP('k')
 #enddo
 
 .sort
