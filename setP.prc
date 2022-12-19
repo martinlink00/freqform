@@ -18,7 +18,6 @@
 	.sort:Storing P({'i'-'j'},'j');
 #enddo
 
-
 #do j=0,{'i'}
 	#if ('i' == 'j')
 		#if ('i' > 1)
@@ -31,7 +30,5 @@
 	Drop tempcef;
 	.sort:Insert P({'i'-'j'},'j');
 #enddo
-
-
 
 #endprocedure
