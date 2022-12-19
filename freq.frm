@@ -1,11 +1,12 @@
-#: MaxTermSize 1M
-#: WorkSpace 4000M
+#: MaxTermSize 2M
+#: WorkSpace 5000M
 #: SubTermsInSmall 1M
 #: SubSmallSize 100M
 #: SubLargeSize 1000M
 #: MaxNumberSize 50K
+#: ScratchSize 5G
 
-#define HC "6";
+#define HC "8";
 #define MAX "{2*'HC'+2}";
 
 
@@ -46,8 +47,6 @@ id p({'MAX'-2},0) = 0;
 	#write "Treating sols at eps^'k'"
 	#call setP('k')
 #enddo
-
-.sort
 
 L freq = -sum_(a,0,'HC',ep^(2*a)*p(2*a,2));
 
