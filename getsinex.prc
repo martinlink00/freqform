@@ -8,5 +8,5 @@
 	id x('j') = 1;
 	id x(c1?number_) = 0;
 #endif
-.store
+.store:Sinex('i','j');
 #endprocedure
