@@ -5,6 +5,10 @@ sinex.frm
 *.log
 *.str
 *.d
+*.sc0
+*.sc1
+*.sc2
+*.sc3
 
 # Compiled Object files
 *.slo
