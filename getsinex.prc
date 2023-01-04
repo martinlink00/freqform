@@ -1,6 +1,6 @@
 #procedure getsinex(i,j)
 
-#if ('i' == -1)
+#if (('i' == -1) || ('j' == {'i'+1}) || ('j' == {'i'+2}))
 	Global sepsx{'i'+2}d{'j'+1} = 0;
 #else
 	Global sepsx{'i'+2}d{'j'+1} = sine{'i'};
